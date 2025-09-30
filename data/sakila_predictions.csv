@@ -1,0 +1,11 @@
+question,sql,db_name,predicted_sql
+List all actors with their IDs and names.,"SELECT actor_id, first_name, last_name FROM actor;",sakila,"SELECT actor_id, first_name, last_name FROM actor;"
+Add a new actor named 'John Doe'.,"INSERT INTO actor (first_name, last_name) VALUES ('John', 'Doe');",sakila,"INSERT INTO actor (first_name, last_name, last_update)  VALUES ('John', 'Doe', NOW());"
+Update the last name of actor with ID 1 to 'Smith'.,UPDATE actor SET last_name = 'Smith' WHERE actor_id = 1;,sakila,UPDATE actor SET last_name = 'Smith' WHERE actor_id = 1;
+Delete the actor with ID 2.,DELETE FROM actor WHERE actor_id = 2;,sakila,DELETE FROM actor WHERE actor_id = 2;
+Show all films and their descriptions.,"SELECT film_id, title, description FROM film;",sakila,"SELECT title, description FROM film;"
+Insert a new film titled 'New Movie' in language 1.,"INSERT INTO film (title, language_id) VALUES ('New Movie', 1);",sakila,"INSERT INTO film (title, language_id)  VALUES ('New Movie', 1);"
+Change the rating of film ID 3 to 'PG-13'.,UPDATE film SET rating = 'PG-13' WHERE film_id = 3;,sakila,UPDATE film SET rating = 'PG-13' WHERE film_id = 3;
+Remove the film with ID 4.,DELETE FROM film WHERE film_id = 4;,sakila,DELETE FROM film WHERE film_id = 4;
+Retrieve all categories.,"SELECT category_id, name FROM category;",sakila,SELECT * FROM category;
+Add a new category 'Horror'.,INSERT INTO category (name) VALUES ('Horror');,sakila,"INSERT INTO category (name, last_update)  VALUES ('Horror', CURRENT_TIMESTAMP);"
